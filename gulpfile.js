@@ -3,7 +3,7 @@ var exec = require('child_process').exec;
 var webdriver = require('gulp-webdriver');
 var seleniumStandalone = require("selenium-standalone");
 
-gulp.task('default', ['launchSelenium','launchAppium', 'test:e2e', 'test:e2eAppium', 'killSelenium']);
+gulp.task('default', ['launchSelenium','launchAppium', 'test:e2e',  'killSelenium']);
 
 gulp.task('launchSelenium', function() {
     seleniumStandalone.install(function () {  
@@ -15,12 +15,12 @@ gulp.task('launchSelenium', function() {
 gulp.task('launchAppium', function () {
     exec('node \"C:\\Program Files (x86)\\Appium\\node_modules\\appium\\bin\\appium.js\"');
 });
-gulp.task('test:e2e', function() {
+gulp.task('test:e2e', ['launchSelenium'], function() {
     return gulp.src('./wdioRunner/wdio.conf.js').pipe(webdriver());
 });
 gulp.task('test:e2eAppium', ['launchAppium'], function() {    
     return gulp.src('./wdioRunner/wdio.conf.appium.js').pipe(webdriver());
 });
-gulp.task('killSelenium',['test:e2e', 'test:e2eAppium'], function() {    
+gulp.task('killSelenium',['test:e2e'], function() {    
     process.exit(1);
 });

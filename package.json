@@ -3,19 +3,19 @@
   "version": "1.0.0",
   "description": "Execute e2e tests",
   "main": "executeTests.js",
-  "dependencies": {
-    "selenium-standalone": "^5.1.1",
-    "gulp-webdriver": "^2.0.1",
-    "wdio-selenium-standalone-service": "^0.0.5",
-    "wdio-mocha-framework": "^0.3.4",
-    "webdriverio": "^4.0.9"
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "wdio-junit-reporter": "^0.1.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp-webdriver": "^2.0.1",
+    "selenium-standalone": "^5.1.1",
+    "wdio-junit-reporter": "^0.1.0",
+    "wdio-mocha-framework": "^0.3.4",
+    "wdio-selenium-standalone-service": "^0.0.5",
+    "webdrivercss": "^2.0.0-beta-rc1",
+    "webdriverio": "^4.0.9"
   },
   "author": "",
   "license": "ISC"

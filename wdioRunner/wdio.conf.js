@@ -4,19 +4,19 @@ exports.config = {
     ],
 
     exclude: [
-        './e2e/editorSpecs.js'
+        './e2e/editorSpecs.js',
+        './e2e/css.js',
     ],
     
     maxInstances: 1,
 
-    capabilities: [
-        {
+    capabilities: [{
 		browserName: 'chrome'
-	}
-    //  {
-    //     browserName: 'internet explorer'
-    // }
-    ],
+	}, {
+        browserName: 'internet explorer'
+    }, {
+        browserName:'firefox'
+    }],
     
     reporters: ['dot','junit'],
     reporterOptions: {
@@ -60,14 +60,14 @@ exports.config = {
     // WebdriverCSS: https://github.com/webdriverio/webdrivercss
     // WebdriverRTC: https://github.com/webdriverio/webdriverrtc
     // Browserevent: https://github.com/webdriverio/browserevent
-    // plugins: {
-    //     webdrivercss: {
-    //         screenshotRoot: 'C:\\work\\FunctionalTesting\\kendoWebDriverIo\\e2e\\images\\reference',
-    //         failedComparisonsRoot: 'C:\\work\\FunctionalTesting\\kendoWebDriverIo\\e2e\\images\\failed',
-    //         misMatchTolerance: 0.05,
-    //         screenWidth: [1024]
-    //     }
-    // },
+    plugins: {
+        webdrivercss: {
+            screenshotRoot: 'images/reference',
+            failedComparisonsRoot: 'images/failed',
+            misMatchTolerance: 0.05,
+            screenWidth: [1024]
+        }
+    },
     //
     // Test runner services
     // Services take over a specific job you don't want to take care of. They enhance
