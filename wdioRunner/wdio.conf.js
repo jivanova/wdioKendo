@@ -1,10 +1,10 @@
 exports.config = {
     specs: [
-        'C:\\work\\FunctionalTesting\\kendoWebDriverIo\\e2e\\css.js'
+        './e2e/*.js'
     ],
 
     exclude: [
-       'C:\\work\\FunctionalTesting\\kendoWebDriverIo\\e2e\\editorSpecs.js'
+        './e2e/editorSpecs.js'
     ],
     
     maxInstances: 1,
@@ -37,7 +37,7 @@ exports.config = {
     coloredLogs: true,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: 'C:\work\FunctionalTesting\kendoWebDriverIo\e2e\errorShots',
+    screenshotPath: './e2e/errorShots',
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
