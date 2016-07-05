@@ -1,0 +1,22 @@
+{
+  "name": "e2e.execution",
+  "version": "1.0.0",
+  "description": "Execute e2e tests",
+  "main": "executeTests.js",
+  "dependencies": {
+    "selenium-standalone": "^5.1.1",
+    "gulp-webdriver": "^2.0.1",
+    "wdio-selenium-standalone-service": "^0.0.5",
+    "wdio-mocha-framework": "^0.3.4",
+    "webdriverio": "^4.0.9"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "wdio-junit-reporter": "^0.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
