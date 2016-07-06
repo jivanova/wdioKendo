@@ -1,4 +1,5 @@
 exports.config = {
+    services: ['selenium-standalone'],
     specs: [
         './e2e/*.js'
     ],
@@ -12,11 +13,13 @@ exports.config = {
 
     capabilities: [{
 		browserName: 'chrome'
-	}, {
+	},
+     {
         browserName: 'internet explorer'
     }, {
         browserName:'firefox'
-    }],
+    }
+    ],
     
     reporters: ['dot','junit'],
     reporterOptions: {
@@ -62,10 +65,10 @@ exports.config = {
     // Browserevent: https://github.com/webdriverio/browserevent
     plugins: {
         webdrivercss: {
-            screenshotRoot: 'images/reference',
-            failedComparisonsRoot: 'images/failed',
+            screenshotRoot: 'e2e/images/reference',
+            failedComparisonsRoot: 'e2e/images/failed',
             misMatchTolerance: 0.05,
-            screenWidth: [1024]
+            screenWidth: [320,480,640,1024]
         }
     },
     //

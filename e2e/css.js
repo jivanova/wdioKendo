@@ -1,26 +1,17 @@
 var assert = require('assert');
 
-var client = require('webdriverio').remote({desiredCapabilities:{browserName: 'chrome'}})
-require('webdrivercss').init(client, {
-    screenshotRoot: 'images/reference',
-    failedComparisonsRoot: 'images',
-    misMatchTolerance: 0.05,
-    screenWidth: [320,480,640,1024]
+describe('css', function () {
+    it('bas', function () {        
+        browser.url('http://jivanova.bedford.progress.com/kendo/playground/local/grid.html');
+        browser.webdrivercss('grid',
+            {
+                name: 'grid',
+                elem: '#grid'
+            } , function(err, res) {
+            console.log(res.header[0].baselinePath);
+            console.log(res.header[0].isWithinMisMatchTolerance);
+            assert.ifError(err);
+            assert.ok(res.header[0].isWithinMisMatchTolerance);
+        })
+    });
 });
-
-console.log(client)
-client
-    .init()
-    .url('http://example.com')
-    .webdrivercss('startpage',[
-        {
-            name: 'header',
-            elem: '#header'
-        }
-    ], function(err, res) {
-        console.log(res.header[0].baselinePath);
-        console.log(res.header[0].isWithinMisMatchTolerance);
-        assert.ifError(err);
-        assert.ok(res.header[0].isWithinMisMatchTolerance);
-    })
-    .end();
