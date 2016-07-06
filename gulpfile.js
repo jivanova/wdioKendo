@@ -6,10 +6,10 @@ var seleniumStandalone = require("selenium-standalone");
 gulp.task('default', ['launchSelenium','launchAppium', 'test:e2e',  'killSelenium']);
 
 gulp.task('launchSelenium', function() {
-    // seleniumStandalone.install(function () {  
-    //     seleniumStandalone.start(function (err, instance) {
-    //     });                  
-    // });    
+    seleniumStandalone.install(function () {  
+        seleniumStandalone.start(function (err, instance) {
+        });                  
+    });    
 });
 
 gulp.task('launchAppium', function () {
