@@ -15,7 +15,8 @@
     "wdio-mocha-framework": "^0.3.4",
     "wdio-selenium-standalone-service": "^0.0.5",
     "webdrivercss": "github:kevinlambert/webdrivercss#wdio4-compatible",
-    "webdriverio": "^4.0.9"
+    "webdriverio": "^4.0.9",
+    "wdio-spec-reporter": "~0.0.1"
   },
   "author": "",
   "license": "ISC"

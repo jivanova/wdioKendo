@@ -1,4 +1,5 @@
 exports.config = {
+    services: ['selenium-standalone'],
     specs: [
         './e2e/*.js'
     ],
@@ -20,7 +21,7 @@ exports.config = {
     }
     ],
     
-    reporters: ['dot','junit'],
+    reporters: ['dot','junit', 'spec'],
     reporterOptions: {
         junit: {
             outputDir: './'
