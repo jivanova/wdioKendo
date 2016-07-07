@@ -3,7 +3,7 @@ var exec = require('child_process').exec;
 var webdriver = require('gulp-webdriver');
 var seleniumStandalone = require("selenium-standalone");
 
-gulp.task('default', ['launchAppium', 'test:e2e',  'killSelenium']);
+gulp.task('default', ['test:e2e',  'killSelenium']);
 
 gulp.task('launchSelenium', function() {
     seleniumStandalone.install(function () {  

@@ -1,5 +1,4 @@
 exports.config = {
-    services: ['selenium-standalone'],
     specs: [
         './e2e/*.js'
     ],
