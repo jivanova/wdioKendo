@@ -1,6 +1,7 @@
 exports.config = {
+    services: ['selenium-standalone'],
     specs: [
-        './e2e/*.js'
+        './e2e/gridBasics.js'
     ],
 
     exclude: [
@@ -11,15 +12,18 @@ exports.config = {
     maxInstances: 1,
 
     capabilities: [{
+		browserName: 'internet explorer'
+	},{
+		browserName: 'firefox'
+	},{
 		browserName: 'chrome'
-	},
-     {
-        browserName: 'internet explorer'
-    }, {
-        browserName:'firefox'
-    }
-    ],
+	}],
     
+    // host: 'ondemand.saucelabs.com',
+    // port: 80, 
+    // user: process.env.SAUCE_USERNAME,
+    // key: process.env.SAUCE_ACCESS_KEY,
+
     reporters: ['dot','junit', 'spec'],
     reporterOptions: {
         junit: {
@@ -150,7 +154,7 @@ exports.config = {
     //
     // Gets executed after all workers got shut down and the process is about to exit. It is not
     // possible to defer the end of the process using a promise.
-    onComplete: function(exitCode) {
-        console.log('end');
-    }
+    // onComplete: function(exitCode) {
+    //     console.log('end');
+    // }
 }
