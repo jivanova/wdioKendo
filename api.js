@@ -6,7 +6,7 @@ var wdio = new Launcher('./wdioRunner/wdio.conf.js');
  seleniumStandalone.install(function () {  
     seleniumstandalone.start(function (err, instance) { 
         wdio.run().then(function () {
-            process.exit(1);
+            //process.exit(1);
         });
     });                  
  });
